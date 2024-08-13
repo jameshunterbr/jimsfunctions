@@ -18,6 +18,13 @@
 ##    subject to minpct and to a     ##
 ##    minimum of 2 instances         ##
 #######################################
+#' Determine a consensus sequence
+#'
+#' @param seq XStringSet object
+#' @param minpct real number
+#' @return vector with consensus letter for each position or "X" if no consensus reached
+#' @examples
+#' consensus_seq(Biostrings::XStringSet(c("ACGT", "ACGT", "ACGT", "ACGT")), .5)
 
 consensus_seq <- function(seq, minpct = .5) {
   pacman::p_load(tidyverse, Biostrings, DECIPHER)

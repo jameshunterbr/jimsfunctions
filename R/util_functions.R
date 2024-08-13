@@ -1,3 +1,10 @@
+#' @title Get R package information
+#' @description This function returns a tibble with information about the R packages that are currently attached to the R session.
+#' @return A tibble with the following columns: package, version, and date.
+#' @examples
+#' get_r_package_info()
+#'
+
 get_r_package_info <- function() {
 
   r_package_table <- sessioninfo::package_info()
