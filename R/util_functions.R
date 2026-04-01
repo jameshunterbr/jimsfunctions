@@ -25,3 +25,11 @@ get_r_package_info <- function() {
   return(r_package_table)
 }
 
+#' @title Show Colors for ggsci and other Palettes
+#' @description This function returns a tibble with information about the R packages that are currently attached to the R session.
+#' @return plot with colors and color numbers
+#' @examples
+#' get_r_package_info()
+#' needs package, name of the palette (aaas here) and number of colors (10 here)
+
+scales::show_col(ggsci::pal_aaas()(10))
